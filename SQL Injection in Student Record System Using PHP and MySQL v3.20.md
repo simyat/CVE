@@ -9,9 +9,9 @@
 - Injection parameter: currentpassword, newpassword
 
 ## Vulnerability Description
-The vulnerability is SQL Injection in Student Record System Using PHP and MySQL version 3.20
-The currentpassword, newpassword parameters are vulnerable to SQL Injection when changing to a new password.
-This vulnerability allows an attacker to inject a SQL query into the currentpassword, newpassword parameters to change the password of another user.
+This SQL injection vulnerability occurs in Student Record System Using PHP and MySQL version 3.20.
+The vulnerability affects the source code of the /change-password.php file.
+If an authenticated user injects a malicious SQL query into the currentpassword, newpassword parameters, they can change another user's password Unauthorized.
 
 #### Impact Assessment 
 This vulnerability allows an authenticated attacker to manipulate SQL queries during the password change process, potentially leading to:
